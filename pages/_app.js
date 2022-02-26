@@ -1,13 +1,15 @@
-import '../styles/globals.css'
-import Header from '../components/Header'
+import "../styles/globals.css";
+import Layout from "../components/Layout";
+// import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
   return (
-  <>
-    <Header />
-    <Component {...pageProps}/>  
-  </>
+    <>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 
-export default MyApp
+export default MyApp;

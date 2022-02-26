@@ -1,29 +1,23 @@
-const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            color: '#333',
-            a: {
-              color: '#1072ce',
-              '&:hover': {
-                color: '#2c5282',
-              },
-            },
-          },
-        },
+      colors: {
+        darkblue: "#020818",
+        ligthteal: "#9bfffd",
+        medteal: "#3ffefb",
+        darkteal: "#15d6d2",
+      },
+      backgroundImage: {
+        Zbackground: "url('/breaker.jpg')",
+      },
+      fontFamily: {
+        sans: ['"EB Garamond"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

@@ -27,7 +27,7 @@ export const getStaticProps = async ({ params }) => {
 
 export default function Home({ post, content }) {
   return (
-    <div>
+    <div className="min-h-screen">
       <Head>
         <title>Kirk Abbott</title>
         <meta name="description" />
