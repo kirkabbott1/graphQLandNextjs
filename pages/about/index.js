@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
-    <div className={`mt-[-56px] px-8 min-h-screen grid place-content-center`}>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 z-50 ">
+    <div className="min-h-screen flex justify-center">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 pt-12">
         <div className=" text-base leading-9 space-y-3 text-white flex-col content-evenly">
           <p>
             I'm a front-end focused software engineer with over 3 years experience, and my

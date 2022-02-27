@@ -66,14 +66,13 @@ export default function Home() {
       <div
         style={{
           width: "100%",
-          paddingTop: "300px",
-          height: "50vh",
+          height: "40vh",
           position: "relative",
         }}
         ref={container}>
         <div style={{ top, left, position: "absolute" }}>
           <QRCode
-            value="mailto:kirkabbott1@gmail.com?subject=Come%20work%20for%20us!"
+            value="mailto:kirkabbott1@gmail.com"
             bgColor={colors[color % colors.length]}
             size={size}
           />

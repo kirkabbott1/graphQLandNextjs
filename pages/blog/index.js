@@ -60,9 +60,9 @@ export default function BlogPage({ posts }) {
     );
   }
   return (
-    <div className=" mt-[-56px] min-h-screen w-full  flex justify-center">
-      <div className="max-w-2xl pt-32 mx-0 px-4 sm:px-6 lg:px-0 py-10 text-white h-full w-full flex-col content-center">
-        <h1 className="text-2xl text-teal-700 font-serif mb-6 font-bold mx-0">Notes</h1>
+    <div className="min-h-screen w-full flex justify-center">
+      <div className="max-w-2xl pt-16 mx-0 px-4 sm:px-6 lg:px-0 py-10 text-white h-full w-full flex-col content-center">
+        <h1 className="text-2xl text-medteal font-serif mb-6 font-bold mx-0">Articles</h1>
         <div>
           <input
             type="text"
@@ -80,7 +80,7 @@ export default function BlogPage({ posts }) {
               </div>
               <div className="md:col-span-3">
                 <Link href={`/blog/${post.node.slug}`}>
-                  <a className="text-2xl font-semibold text-teal-300 hover:text-teal-700 transition-colors duration-300">
+                  <a className="text-2xl font-semibold text-teal-300 hover:text-lightteal transition-colors duration-300">
                     {post.node.title}
                   </a>
                 </Link>

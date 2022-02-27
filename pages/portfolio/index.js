@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
 export default function portfolioPage({ items }) {
   return (
     <div className="min-h-screen">
-      <div className="max-w-3xl mx-auto px-6 pt-36 sm:px-6 lg:px-20">
+      <div className="max-w-3xl mx-auto px-6 pt-12 sm:px-6 lg:px-20">
         {items?.map((item) => (
           <div key={item.slug}>
             <Link href={`/portfolio/${item.slug}`}>
