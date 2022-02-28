@@ -1,7 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Head from "next/head";
-console.log(Footer);
 export default function Layout({ children }) {
   return (
     <div className="bg-Zbackground w-full h-full bg-left-top bg-cover">
@@ -17,7 +16,7 @@ export default function Layout({ children }) {
       </Head>
       <Header />
       <main className="min-h-screen">{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

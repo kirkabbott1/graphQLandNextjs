@@ -89,11 +89,7 @@ export default function Header() {
 
       <div className="flex justify-center md:hidden">
         <button
-          // onClick={() => setIsOpen(!isOpen)}
           onClick={() => {
-            console.log("isOpen:", isOpen);
-            console.log("not isOpen:", !isOpen);
-
             setIsOpen(!isOpen);
           }}
           type="button"
