@@ -9,13 +9,17 @@ export default function Header() {
       <div className="flex-shrink-0">
         <div>
           <Link href="/">
-            <a className="text-3xl sm:text-2xl font-semibold text-medteal hover:text-lightteal">
-              KA
+            <a className="text-2xl md:text-3xl">
+              <div className="inline-flex text-center align-middle brightness-200 overflow-hidden">
+                <span className="txtS text-2xl md:text-3xl font-bold tracking-widest">KA</span>
+                <span className="txtGradient"></span>
+                <span className="dodge"></span>
+              </div>
             </a>
           </Link>
         </div>
       </div>
-      <div className="hidden md:flex ">
+      <div className="hidden md:flex lg:pr-12">
         <ul className="flex">
           <li className="ml-4">
             <Link href="/about">
@@ -23,10 +27,15 @@ export default function Header() {
             </Link>
           </li>
           <li className="ml-4">
+            <Link href="/contact">
+              <a className="text-medteal hover:text-lightteal">Contact</a>
+            </Link>
+          </li>
+          {/* <li className="ml-4">
             <Link href="/portfolio">
               <a className="text-medteal hover:text-lightteal">Playground</a>
             </Link>
-          </li>
+          </li> */}
           <li className="ml-4">
             <Link href="/blog">
               <a className="text-medteal hover:text-lightteal">Articles</a>
@@ -36,7 +45,7 @@ export default function Header() {
       </div>
 
       <Transition
-        className="md:hidden"
+        className=""
         show={isOpen}
         enter="transition ease-out duration-100 transform"
         enterFrom="opacity-0 scale-95"
@@ -53,17 +62,22 @@ export default function Header() {
                 <ul className="flex-col  mt-4 sm:mt-0">
                   <li className="ml-4">
                     <Link href="/about">
-                      <a className="text-teal-300 hover:text-lightteal">About</a>
+                      <a className="text-teal-400 hover:text-lightteal">About</a>
                     </Link>
                   </li>
                   <li className="ml-4">
+                    <Link href="/contact">
+                      <a className="text-medteal hover:text-lightteal">Contact</a>
+                    </Link>
+                  </li>
+                  {/* <li className="ml-4">
                     <Link href="/portfolio">
                       <a className="text-teal-300 hover:text-lightteal">Playground</a>
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="ml-4">
                     <Link href="/blog">
-                      <a className="text-teal-300 hover:text-lightteal">Articles</a>
+                      <a className="text-teal-400 hover:text-lightteal">Articles</a>
                     </Link>
                   </li>
                 </ul>

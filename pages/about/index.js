@@ -1,9 +1,9 @@
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex justify-center">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 pt-12">
-        <div className=" text-base leading-9 space-y-3 text-white flex-col content-evenly">
-          <p>
+    <div className="min-h-screen  p-12">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <div className=" text-lg md:text-xl lg:text-2xl max-w-prose text-lightteal leading-9 space-y-9 flex-col content-evenly">
+          <p className="">
             I'm a front-end focused software engineer with over 3 years experience, and my
             background also includes cloud development and network engineering.
           </p>

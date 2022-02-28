@@ -14,14 +14,13 @@ export const getStaticProps = async () => {
 
 export default function HomePage({ data }) {
   return (
-    <div className=" min-h-full ">
-      <div className="px-2 pt-36 grid grid-cols-2 content-start overflow-hidden ">
-        <div className="text-center align-middle pt-5 text-medteal">
-          <p className="lg:text-4xl md:text-3xl text-xs font-bold leading-8 tracking-widest lg:text-shadow-3d">
+    <div className="min-h-full">
+      <div className="px-2 pt-12 grid grid-cols-2 content-start overflow-hidden ">
+        <div className="grid place-content-center  text-medteal space-y-6">
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-lightteal to-darkteal lg:text-4xl md:text-3xl text-xs font-light tracking-widest  m-auto">
             Kirk Abbott
           </p>
-
-          <p className="lg:text-3xl md:text-2xl text-xs font-bold tracking-widest pt-6">
+          <p className="text-transparent bg-clip-text bg-gradient-to-l from-lightteal to-darkteal lg:text-3xl md:text-2xl text-xs font-light tracking-widest m-auto">
             Software Engineer
           </p>
         </div>
@@ -31,9 +30,10 @@ export default function HomePage({ data }) {
             <div width={140} height={140}>
               <Image
                 className="rounded-lg"
-                src={data.posts[0].author.image.url}
+                src="/kirkPic2.jpeg"
                 width={140}
                 height={140}
+                priority={true}
                 // layout="responsive"
               />
             </div>
@@ -48,5 +48,3 @@ export default function HomePage({ data }) {
     // </div>
   );
 }
-
-//max-w-[150px] max-h-[150px]
