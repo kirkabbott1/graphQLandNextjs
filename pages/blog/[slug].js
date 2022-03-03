@@ -39,16 +39,16 @@ export default function Home({ post, content }) {
         <div className="flex space-x-3 mt-2">
           {post.tags.map((tag) => (
             <span
-              className="uppercase text-sm tracking-wide m-2 bg-gray-100 px-2 py-1 rounded-lg text-gray-900"
+              className="uppercase text-sm tracking-wide m-2 bg-gray-100 px-2 py-1 rounded-lg text-lightteal"
               key={tag}>
               {tag}
             </span>
           ))}
         </div>
         <div className="flex justify-between items-center mb-8">
-          <p className="text-gray-700">{new Date(post.date).toDateString()}</p>
+          <p className="text-lightteal">{new Date(post.date).toDateString()}</p>
           <div className="flex items-center">
-            <p className="mr-4 text-gray-800 text-lg font-semibold">{post.author.name}</p>
+            <p className="mr-4 text-lightteal text-lg font-semibold">{post.author.name}</p>
             <Image
               className="rounded-full"
               src={post.author.image.url}
