@@ -10,7 +10,7 @@ export default function Header() {
         <div>
           <Link href="/">
             <a className="text-2xl md:text-3xl">
-              <div className="inline-flex text-center align-middle text-medteal md:text-2xl text-sm  overflow-hidden">
+              <div className="inline-flex text-center align-middle text-medteal md:text-2xl overflow-hidden">
                 <span className="font-bold tracking-widest">KA</span>
               </div>
             </a>
