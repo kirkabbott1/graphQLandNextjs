@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import QRCode from "react-qr-code";
 
 let size = 200;
-const colors = ["#16BDB1", "#117271", "#61bfbf", "#D0BDD1", "#75ffb3"];
+const colors = ["#94f7f5", "#75ffb3", "#f2f475", "#79a9f7", "#bcffe6"];
 
 export default function Home() {
   const container = useRef();

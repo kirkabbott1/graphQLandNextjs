@@ -10,10 +10,8 @@ export default function Header() {
         <div>
           <Link href="/">
             <a className="text-2xl md:text-3xl">
-              <div className="inline-flex text-center align-middle brightness-200 overflow-hidden">
-                <span className="txtS text-2xl md:text-3xl font-bold tracking-widest">KA</span>
-                <span className="txtGradient"></span>
-                <span className="dodge"></span>
+              <div className="inline-flex text-center align-middle text-medteal md:text-2xl text-sm  overflow-hidden">
+                <span className="font-bold tracking-widest">KA</span>
               </div>
             </a>
           </Link>
@@ -62,7 +60,7 @@ export default function Header() {
                 <ul className="flex-col  mt-4 sm:mt-0">
                   <li className="ml-4">
                     <Link href="/about">
-                      <a className="text-teal-400 hover:text-lightteal">About</a>
+                      <a className="text-medteal hover:text-lightteal">About</a>
                     </Link>
                   </li>
                   <li className="ml-4">
@@ -77,7 +75,7 @@ export default function Header() {
                   </li> */}
                   <li className="ml-4">
                     <Link href="/blog">
-                      <a className="text-teal-400 hover:text-lightteal">Articles</a>
+                      <a className="text-medteal hover:text-lightteal">Articles</a>
                     </Link>
                   </li>
                 </ul>

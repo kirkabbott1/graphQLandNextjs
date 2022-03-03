@@ -43,7 +43,9 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col  w-1/2 mx-auto mt-16 gap-8 h-screen text-black ">
       <div className="flex justify-center text-2xl md:text-4xl text-medteal">
-        <h1>Let's Connect!</h1>
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-lightteal to-darkteal lg:text-4xl md:text-3xl text-xs ">
+          Let's Connect!
+        </h1>
       </div>
       <input
         className="p-2 rounded"
@@ -73,25 +75,28 @@ export default function ContactPage() {
       </div>
 
       <div className=" text-medteal flex justify-center">
-        <span className={`${emailSent ? "visible" : "hidden"} `}>
+        <span
+          className={`${
+            emailSent ? "visible" : "hidden"
+          }, text-transparent bg-clip-text bg-gradient-to-r from-darkteal to-lightteal md:text-2xl text-xs`}>
           Thank you for message, I'll be in touch soon!
         </span>
       </div>
-      <div className="grid content-end pt-5">
+      <div className="grid content-end">
         <div className="flex justify-evenly">
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://linkedin.com/in/kirkabbott1"
-            className="text-teal-400 hover:text-lightteal">
-            <FontAwesomeIcon className="text-6xl" icon="fa-brands fa-linkedin" />
+            className="text-medteal hover:text-lightteal">
+            <FontAwesomeIcon className="text-3xl" icon="fa-brands fa-linkedin" />
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/kirkabbott1/"
-            className="text-teal-400 hover:text-lightteal">
-            <FontAwesomeIcon className="text-6xl" icon="fa-brands fa-github" />
+            className="text-medteal hover:text-lightteal">
+            <FontAwesomeIcon className="text-3xl" icon="fa-brands fa-github" />
           </a>
         </div>
       </div>

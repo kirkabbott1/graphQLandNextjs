@@ -1,16 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
-import { getPostsAndPortfolio } from "../lib/data";
+// import { getPostsAndPortfolio } from "../lib/data";
 import QrAnimate from "../components/QrAnimate";
 
-export const getStaticProps = async () => {
-  const data = await getPostsAndPortfolio();
-  return {
-    props: {
-      data,
-    },
-  };
-};
+// export const getStaticProps = async () => {
+//   const data = await getPostsAndPortfolio();
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// };
 
 export default function HomePage({ data }) {
   return (
@@ -41,7 +41,7 @@ export default function HomePage({ data }) {
         </div>
       </div>
       {/* <div className=" flex justify-center w-2/3 h-10"> */}
-      <div className=" bg-Zbackground m-20 lg:m-40 border-2 border-medteal ">
+      <div className=" bg-Zbackground m-20 lg:m-40 border-2 border-medteal">
         <QrAnimate />
       </div>
     </div>
