@@ -73,11 +73,11 @@ export default function Header() {
                       <a className="text-teal-300 hover:text-lightteal">Playground</a>
                     </Link>
                   </li> */}
-                  <li className="ml-4">
+                  {/* <li className="ml-4">
                     <Link href="/blog">
                       <a className="text-medteal hover:text-lightteal">Articles</a>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
