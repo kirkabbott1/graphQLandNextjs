@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
     <div className="min-h-screen  p-12">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+      <div className="max-w-2xl mx-auto px-4 py-12">
         <div className=" text-lg md:text-xl lg:text-2xl max-w-prose text-lightteal leading-9 space-y-9 flex-col content-evenly">
           <p className="">
             I'm a front-end focused software engineer with over 3 years experience. My background
@@ -25,8 +25,8 @@ export default function AboutPage() {
             and pecan orchard. I also helped start a local pecan butter business.
           </p>
           <p>
-            I'm currently looking for a remote front-end opportunity at a growing company to add
-            value while continuing to expand my software development and leadership skills.
+            I'm currently open to a remote front-end opportunity at a growing company to add value
+            while continuing to expand my software development and leadership skills.
           </p>
         </div>
       </div>

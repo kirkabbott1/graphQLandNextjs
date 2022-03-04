@@ -17,16 +17,16 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      <div className="hidden md:flex lg:pr-12">
+      <div className="hidden md:flex lg:pr-2">
         <ul className="flex">
           <li className="ml-4">
             <Link href="/about">
-              <a className="text-medteal hover:text-lightteal">About</a>
+              <a className="text-medteal hover:text-lightteal cursor-auto">About</a>
             </Link>
           </li>
           <li className="ml-4">
             <Link href="/contact">
-              <a className="text-medteal hover:text-lightteal">Contact</a>
+              <a className="text-medteal hover:text-lightteal cursor-auto">Contact</a>
             </Link>
           </li>
           {/* <li className="ml-4">
@@ -34,11 +34,11 @@ export default function Header() {
               <a className="text-medteal hover:text-lightteal">Playground</a>
             </Link>
           </li> */}
-          <li className="ml-4">
+          {/* <li className="ml-4">
             <Link href="/blog">
-              <a className="text-medteal hover:text-lightteal">Articles</a>
+              <a className="text-medteal hover:text-lightteal cursor-auto">Articles</a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
 

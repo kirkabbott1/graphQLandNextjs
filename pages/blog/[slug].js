@@ -34,12 +34,12 @@ export default function Home({ post, content }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-0">
-        <h1 className="text-6xl text-gray-900 font-bold">{post.title}</h1>
+      <div className=" mx-auto px-4 ">
+        <h1 className="text-3xl text-lightteal pt-8 font-bold">{post.title}</h1>
         <div className="flex space-x-3 mt-2">
           {post.tags.map((tag) => (
             <span
-              className="uppercase text-sm tracking-wide m-2 bg-gray-100 px-2 py-1 rounded-lg text-lightteal"
+              className="uppercase text-sm tracking-wide m-2  px-2 py-1 rounded-lg text-lightteal"
               key={tag}>
               {tag}
             </span>
@@ -59,7 +59,7 @@ export default function Home({ post, content }) {
           </div>
         </div>
 
-        <div className="prose prose-xl max-w-none">
+        <div className="text-white">
           <MDXRemote {...content} />
         </div>
       </div>

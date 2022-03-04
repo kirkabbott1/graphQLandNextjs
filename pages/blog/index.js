@@ -61,14 +61,14 @@ export default function BlogPage({ posts }) {
   }
   return (
     <div className="min-h-screen w-full flex justify-center">
-      <div className="max-w-2xl pt-16 mx-0 px-4 sm:px-6 lg:px-0 py-10 text-white h-full w-full flex-col content-center">
+      <div className="max-w-2xl pt-16 mx-0 px-4 sm:px-6 lg:px-0 py-10 text-lightteal h-full w-full flex-col content-center">
         <h1 className="text-2xl text-medteal font-serif mb-6 font-bold mx-0">Articles</h1>
         <div>
           <input
             type="text"
             value={searchValue}
             placeholder="Search notes"
-            className="focus:outline-none mb-6  focus:ring-gray-900 w-full rounded-lg border h-10 pl-4 text-lg text-gray-900 border-gray-200"
+            className="focus:outline-none mb-6  focus:ring-lightteal w-full rounded-lg border h-10 pl-4 text-lg text-darkteal border-darkteal"
             onChange={(event) => setSearchValue(event.target.value)}
           />
         </div>
@@ -84,8 +84,10 @@ export default function BlogPage({ posts }) {
                     {post.node.title}
                   </a>
                 </Link>
-                <p className="text-white leading-relaxed">{post.node.description}</p>
-                <div className="text-sm text-white font-semibold mt-1">{post.node.author.name}</div>
+                <p className="text-lightteal leading-relaxed">{post.node.description}</p>
+                <div className="text-sm text-lightteal font-semibold mt-1">
+                  {post.node.author.name}
+                </div>
               </div>
             </div>
           ))}
@@ -107,7 +109,7 @@ export default function BlogPage({ posts }) {
                 setSkip(skip + 5);
               }}
               disabled={!data?.postsConnection.pageInfo.hasNextPage}
-              className="bg-gray-700 w-20 text-white px-3 py-1 rounded-md disabled:bg-gray-400 disabled:text-gray-800 disabled:cursor-not-allowed">
+              className="bg-gray-700 w-20 text-lightteal px-3 py-1 rounded-md disabled:bg-gray-400 disabled:text-gray-800 disabled:cursor-not-allowed">
               Next
             </button>
           </div>
