@@ -21,12 +21,12 @@ export default function Header() {
         <ul className="flex">
           <li className="ml-4">
             <Link href="/about">
-              <a className="text-medteal hover:text-lightteal cursor-auto">About</a>
+              <a className="text-medteal hover:text-lightteal">About</a>
             </Link>
           </li>
           <li className="ml-4">
             <Link href="/contact">
-              <a className="text-medteal hover:text-lightteal cursor-auto">Contact</a>
+              <a className="text-medteal hover:text-lightteal">Contact</a>
             </Link>
           </li>
           {/* <li className="ml-4">
