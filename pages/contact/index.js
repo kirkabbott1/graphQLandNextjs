@@ -1,17 +1,28 @@
 import React, { useState } from "react";
 import emailjs, { init } from "emailjs-com";
-init("Amgjas69dsuAUvY5x");
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
+init("Amgjas69dsuAUvY5x");
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [emailSent, setEmailSent] = useState(false);
+  // const [emailSent, setEmailSent] = useState(false);
   const isValidEmail = (email) => {
     const regex =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(email).toLowerCase());
+  };
+  const toastifySuccess = () => {
+    toast("Email sent", {
+      position: "bottom-right",
+      autoClose: 30000,
+      hideProgressBar: true,
+      pauseOnHover: true,
+      draggable: false,
+      toastId: "notifyToast",
+    });
   };
 
   const submit = () => {
@@ -27,13 +38,13 @@ export default function ContactPage() {
 
         emailjs
           .send(serviceId, templateId, templateParams)
-          .then((response) => console.log("emailjs response:", response))
-          .then((error) => console.log("emailjs error:", error));
+          .then((response) => console.log("emailjs response:", response));
 
         setName("");
         setEmail("");
         setMessage("");
-        setEmailSent(false);
+        // setEmailSent(true);
+        toastifySuccess();
       } else {
         alert("Please fill in all fields correctly");
       }
@@ -41,8 +52,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col  w-1/2 mx-auto mt-16 gap-8 h-screen ">
-      <div className="flex justify-center text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-l from-lightteal  to-darkteal">
+    <div className="flex flex-col w-1/3 mx-auto mt-16 gap-8 h-screen ">
+      <div className="flex justify-center text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-l from-lightteal  to-darkteal">
         <h1>Let's Connect!</h1>
       </div>
       <input
@@ -72,29 +83,25 @@ export default function ContactPage() {
         </button>
       </div>
 
-      {/* <div className=" text-medteal flex justify-center">
-        <span className={emailSent ? "visible" : null}>
-          Thank you for message, I'll be in touch soon!
-        </span>
-      </div> */}
-      <div className="grid content-end pt-5">
+      <div className=" text-medteal flex justify-center">
+        <ToastContainer className="text-medteal bg-inherit" />
+      </div>
+      {/* <div className="grid content-end pt-5">
         <div className="flex justify-evenly">
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://linkedin.com/in/kirkabbott1"
-            className="text-medteal hover:text-lightteal">
-            <FontAwesomeIcon className="text-6xl" icon="fa-brands fa-linkedin" />
-          </a>
+            className="text-medteal hover:text-lightteal"></a>
+
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/kirkabbott1/"
             className="text-medteal hover:text-lightteal">
-            <FontAwesomeIcon className="text-6xl" icon="fa-brands fa-github" />
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
