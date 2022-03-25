@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
+  .home-text-shadow {
+    text-shadow: 0 0 32px #57f5ff;
+  }
   /* .text-shadow {
     text-shadow: 0 2px 4px rgb(255, 255, 255);
   }

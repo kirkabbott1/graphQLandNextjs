@@ -79,29 +79,32 @@ export default function ContactPage() {
         <button
           className=" px-6  text-darkteal border-2 border-darkteal rounded hover:text-lightteal hover:border-lightteal"
           onClick={submit}>
-          Send it
+          Send <i class="pl-1 text-sm fa-solid fa-paper-plane"></i>
         </button>
       </div>
 
       <div className=" text-medteal flex justify-center">
         <ToastContainer className="text-medteal bg-inherit" />
       </div>
-      {/* <div className="grid content-end pt-5">
+      <div className="grid content-center ">
         <div className="flex justify-evenly">
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://linkedin.com/in/kirkabbott1"
-            className="text-medteal hover:text-lightteal"></a>
+            className="text-medteal text-4xl hover:text-lightteal">
+            <i className="fa-brands fa-linkedin"></i>
+          </a>
 
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/kirkabbott1/"
-            className="text-medteal hover:text-lightteal">
+            className="text-medteal text-4xl hover:text-lightteal">
+            <i className="fa-brands fa-github-square"></i>
           </a>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

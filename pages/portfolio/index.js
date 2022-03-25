@@ -15,39 +15,39 @@ export const getStaticProps = async () => {
 export default function portfolioPage({ items }) {
   return (
     <div className="min-h-screen">
-      <div className="max-w-3xl mx-auto px-6 pt-12 sm:px-6 lg:px-20">
+      <div className="max-w-3xl mx-auto pt-12 sm:px-6 md:px-10 lg:px-20 ">
         {items?.map((item) => (
           <div key={item.slug}>
-            <Link href={`/portfolio/${item.slug}`}>
-              <a>
-                <div className="relative overflow-hidden">
-                  <div className="absolute w-full h-full z-10 opacity-60 bg-darkblue"></div>
-                  <div className="absolute w-full h-full z-20 flex flex-col justify-center items-center text-center px-4">
-                    <h3 className="text-white font-semibold text-2xl">{item.title}</h3>
-                    <p className="text-gray-50 text-lg mt-4 leading-relaxed hidden md:flex">
-                      {item.description}
-                    </p>
-                    <div className="mt-4">
-                      {item.tags.map((tag) => (
-                        <span
-                          className="text-white uppercase text-sm tracking-wide m-2 bg-gray-700 px-2 py-1 rounded-lg"
-                          key={tag}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+            <a href="https://www.healthnutbutter.com" target="_blank" rel="noopener noreferrer">
+              <div className="relative overflow-hidden">
+                <div className="absolute w-full h-full z-10 opacity-80 bg-darkblue shadow-2xl"></div>
+                <div className="absolute w-full h-full z-20 flex flex-col justify-center items-center text-center px-4">
+                  <h3 className=" text-lg md:text-xl lg:text-2xl max-w-prose text-lightteal leading-9 space-y-9 flex-col content-evenly">
+                    {item.title}
+                  </h3>
+                  <p className=" pt-3 text-lg md:text-xl lg:text-2xl max-w-prose text-lightteal leading-9 space-y-9 flex-col content-evenly">
+                    {item.description}
+                  </p>
+                  <div className="mt-4">
+                    {item.tags.map((tag) => (
+                      <span
+                        className=" text-lg md:text-xl lg:text-2xl max-w-prose text-lightteal leading-9 space-y-9 flex-col content-evenly"
+                        key={tag}>
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <Image
-                    priority="true"
-                    src={item.coverImage.url}
-                    objectFit="cover"
-                    height={item.coverImage.height}
-                    width={item.coverImage.width}
-                    className="absolute"
-                  />
                 </div>
-              </a>
-            </Link>
+                <Image
+                  priority="true"
+                  src={item.coverImage.url}
+                  objectFit="cover"
+                  height={item.coverImage.height}
+                  width={item.coverImage.width}
+                  className="absolute"
+                />
+              </div>
+            </a>
           </div>
         ))}
       </div>

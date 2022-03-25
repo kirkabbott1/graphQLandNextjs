@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function AboutPage() {
   return (
     <div className="min-h-screen  p-12">
@@ -22,7 +23,10 @@ export default function AboutPage() {
           </p>
           <p>
             For the last two years I've been helping family in South Georgia where we have a farm
-            and pecan orchard. I also helped start a local pecan butter business.
+            and pecan orchard. I also helped start a local pecan butter business,{" "}
+            <Link href="/portfolio">
+              <a className="text-medteal hover:text-lightteal text-xl">HealthNutButter</a>
+            </Link>
           </p>
           <p>
             I'm currently open to a remote front-end opportunity at a growing company to add value

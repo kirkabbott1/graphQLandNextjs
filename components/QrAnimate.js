@@ -42,7 +42,8 @@ export default function Home() {
   });
 
   useEffect(() => {
-    if (!container.current) return;
+    let cleanUp = false;
+    if (!container.current && cleanUp) return;
 
     window.requestAnimationFrame(() => {
       const width = container.current?.offsetWidth;
@@ -59,6 +60,9 @@ export default function Home() {
         setBox((val) => ({ ...val, top: top + topDirection, left: left + leftDirection }));
       }
     });
+    return () => {
+      cleanUp = true;
+    };
   }, [color, top, left, topDirection, leftDirection]);
 
   return (
@@ -71,11 +75,7 @@ export default function Home() {
         }}
         ref={container}>
         <div style={{ top, left, position: "absolute" }}>
-          <QRCode
-            value="mailto:kirkabbott1@gmail.com"
-            bgColor={colors[color % colors.length]}
-            size={size}
-          />
+          <QRCode value="smsto:4042192572" bgColor={colors[color % colors.length]} size={size} />
         </div>
       </div>
     </>
